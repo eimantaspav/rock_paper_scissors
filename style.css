@@ -1,0 +1,170 @@
+/* ---------------- */
+/* Reset            */
+/* ---------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  font-family: "Play", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100hv;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make forms easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  helper */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.weapons__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 70%;
+}
+
+.rock,
+.paper,
+.scissors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  float: left;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+  transform: scale(1.1);
+  border-radius: 4px;
+}
+
+.rock:hover:hover {
+  border: 1px solid rgb(255, 118, 118);
+}
+
+.paper:hover {
+  border: 1px solid rgb(93, 174, 139);
+}
+
+.scissors:hover {
+  border: 1px solid rgb(70, 108, 149);
+}
+
+.title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title span + span {
+  margin-left: 1rem;
+}
+
+/* .rules span:nth-child(1) {
+  color: red;
+}
+
+.rules span:nth-child(2) {
+  color: green;
+}
+
+.rules span:nth-child(3) {
+  color: blue;
+} */
+
+.game {
+  font-size: 2rem;
+}
+
+/* Utility */
+.color-rock {
+  color: #ff7676;
+}
+
+.color-paper {
+  color: #5dae8b;
+}
+
+.color-scissors {
+  color: #466c95;
+}
+
+.results {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  gap: 5rem;
+}

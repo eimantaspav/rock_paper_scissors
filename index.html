@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">
+        <span class="color-rock">Rock</span>
+        <span class="color-paper">Paper</span>
+        <span class="color-scissors"> Scissors</span>
+      </h1>
+      <h2 class="game">
+        <span>3 Weapons</span> | <span>5 Lives</span> | <span>2 Outcomes</span>
+      </h2>
+
+      <h2 class="rules">
+        <span>Rock beats Scissors</span> | <span>Paper beats Rock</span> |
+        <span>Scissors beat Paper</span>
+      </h2>
+
+      <div class="weapons__container">
+        <div class="rock"><img src="img/rock.svg" alt="" /></div>
+        <div class="paper"><img src="img/paper.svg" alt="" /></div>
+        <div class="scissors"><img src="img/scissors.svg" alt="" /></div>
+      </div>
+
+      <div class="results">
+        <div class="computer-choice">
+          <div class="computer-choice__text">Computer Choice:</div>
+          <img src="" alt="" class="computer_choice__img" />
+        </div>
+
+        <div class="status">
+          <div class="status__round">Current round:</div>
+          <div class="status__lives">Your Lives: | Computer Lives:</div>
+          <div class="status__winning">Currently winning: Waiting</div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
