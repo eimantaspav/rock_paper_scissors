@@ -2,11 +2,14 @@
 const choices = ["rock", "paper", "scissors"];
 let randomChoice;
 let userChoice;
+let roundCounter = 0;
 
-// Select HTML divs
+// Selectors
 const userChoiceRock = document.querySelector(".rock");
 const userChoicePaper = document.querySelector(".paper");
 const userChoiceScissors = document.querySelector(".scissors");
+const computerChoiceText = document.querySelector(".computer-choice");
+const statusRoundCountText = document.querySelector(".status__round");
 
 // Create a random computer choice
 let getComputerChoice = () => {
@@ -15,7 +18,14 @@ let getComputerChoice = () => {
 
 // Play 1 round of RPS
 let playRound = () => {
+  // Round counter
+  roundCounter++;
+  statusRoundCountText.innerHTML = `<div class="status__round">Current round: ${roundCounter}</div>`;
   getComputerChoice();
+  // Change computer choice text
+  computerChoiceText.innerHTML = `<div class="computer-choice">Computer choice<h2>${
+    randomChoice.charAt(0).toUpperCase() + randomChoice.slice(1)
+  }</h2></div>`;
   // If same choice = draw
   if (randomChoice === userChoice) {
     console.log("Draw");
