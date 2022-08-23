@@ -35,7 +35,6 @@ p {
 /* set up the body */
 body {
   line-height: 1.5;
-  min-height: 100hv;
 }
 
 /* make images easier to work with */
@@ -71,22 +70,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 96vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
 }
 
 .weapons__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 70%;
 }
 
@@ -106,7 +103,8 @@ body {
 
 .rock:hover,
 .paper:hover,
-.scissors:hover {
+.scissors:hover,
+.play-again:hover {
   transform: scale(1.1);
   border-radius: 4px;
 }
@@ -168,5 +166,34 @@ body {
   width: 70%;
   justify-content: space-around;
   gap: 5rem;
-  border: 1px solid black;
+  border: 1px solid #466c95;
+  border-radius: 4px;
+}
+
+.game-winner {
+  text-transform: uppercase;
+  font-size: 3rem;
+  animation: blinker 1s linear infinite;
+}
+
+.play-again {
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #466c95;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 1rem;
+  margin-left: 2rem;
+}
+
+.no-blink {
+  animation: none;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
